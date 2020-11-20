@@ -1,0 +1,680 @@
+/* First item in the CSS file  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,700i');
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight:300;
+	color: #555;
+	margin: 0;
+	padding: 0;
+}
+
+#page{
+	max-width:1200px; 
+	/*as much as the image we used allows(1200x430)*/
+	margin:0 auto;
+	position: relative;
+	/*se rearanjeaza in functie de pozitia din urma*/
+}
+
+/* Text */
+
+/*1em= 1 times the base font(care este 16px, declarat mai sus in body) */
+/* em-urile sunt bune pentru adaptarea continutului pe diferite dispozitive*/
+
+h1 {
+	margin:0  0 1em 0;
+	font-size:2.8em;
+	font-weight:700;
+}
+
+h2 {
+	margin:0  0 .5em 0;
+	font-size:1.6em;
+	font-weight:700;
+	line-height:1.1em;
+}
+
+h3 {
+	margin:0  0 .5em 0;
+	font-size:1.3em;
+	font-weight:700;
+	;
+}
+
+h4 {
+	margin:0  0 1.5em 0;
+	font-size:1em;
+	font-weight:700;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+a {
+	color: #007eff;
+}
+
+a:visited {
+	color: #65b1ff;
+}
+
+a.btn {
+	font-size:1.2em;
+	text-decoration: none;
+	/*the text will not have a line, as other links*/
+	color: white;
+	border: 1px solid #fff;
+	/*width-style-color*/
+	padding: 4px 15px;
+	transition: background-color .5s;
+}
+
+/*hover=pseudoclass; used to select elements when you mouse over them*/
+a.btn:hover {
+	background-color: rgba(0,0,0,.3);
+	/*rgba(red, green, blue, alpha)
+	30% opaque sau 70% transparent
+	The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque)*/
+}
+
+/*Header*/
+
+header {
+	height:430px;
+
+	/*am ales 430px pentru ca formatul imaginii e 1200x430*/
+	
+	background: #cf0004 url(../images/banner_1200.jpg) 
+				no-repeat center bottom; position: relative;
+}
+
+header a.logo{ 
+	z-index: 1;
+	/* this property specifies the stack order of an element;
+	an element with a greater stack order is always in front of an element with a lower stack order*/
+	position: absolute;
+	/*totul va fi pozitionat raportat la logo*/
+	display: block;
+	width:160px;
+	height:66px;
+	background: url(../images/logo.svg) no-repeat 0 0;
+	/* 0 position on the X and 0 on the Y , 
+	this will put the logo in the upper hand left corner*/
+	background-size: contain;
+	/*sized to fit within the height and width of the logo.svg*/
+ 	top:15px;
+ 	/*15px from the top of the header element*/
+ 	left:20px; /*20px away from the left side of the page*/
+ }
+
+ header a.logo span {
+ 	display:none;
+ }
+
+ header div.hero{
+ 	position: absolute;
+ 	width: 42%;
+ 	/*% of the width of the header element*/
+ 	top: 130px;
+ 	left:55%;
+ }
+
+ header div.hero h1 {
+ 	line-height:1em;
+ 	/*specifies the spacing between the text rows/lines*/
+ 	margin: 0 0 30px 0;
+ 	color:#fff;
+ }
+
+/* Section - All*/
+
+section {
+	padding: 0 30px;
+}
+section::after {
+	content: ' ';
+	display: block;
+	clear:both;
+/*the clear property does not allow float elements on the
+left or right side of the specified element*/
+}
+/*:: means defining a pseudo element, and just one : will define a pseudo class
+-pseudo elements=used to style specified parts of an element (Style the first letter, or line, of an element;
+Insert content before, or after, the content of an element)*/
+/*A pseudo-class is used to define a special state of an element.
+For example, it can be used to:
+
+Style an element when a user mouses over it
+Style visited and unvisited links differently
+Style an element when it gets focus*/
+
+
+
+
+/* Section main*/
+
+section.main {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding:0;
+}
+
+section.main aside {
+	width: 33%;
+	float: left;
+	/* -specifies how the element should float
+	   -elements after a floating element will float around it
+	   	-the other float elements will be next to each other
+	   	-the parenting element will not change its size for the
+	   	floating element, but the elements will fit the parent and
+     and float inside its size*/
+	text-align: center;
+}
+
+section.main .content {
+	margin: 15px;
+	background: no-repeat center top;
+	/*center= x position
+	top= y position*/
+	background-size: 75px 75px;
+	/* first 75 px are for the width, and the next 
+	are for the height*/
+	padding-top:85px;
+	/*=the space where the svg images will be placed*/
+}
+
+
+section.main aside h3 a {
+	color: black;
+	text-decoration: none;
+}
+section.main aside h3 a:hover {
+	text-decoration: underline;
+}
+
+section.main aside .content.trending {
+		background-image: url(../images/icon_star.svg);
+/* svg=scalable vector graphics; mathematical file format that can be scaled to any size within the browser*/
+}
+
+section.main aside .content.find-it {
+		background-image: url(../images/icon_marker.svg);
+}
+
+section.main aside .content.tools {
+		background-image: url(../images/icon_gear.svg);
+}
+
+/*Section - Atmosphere*/
+
+section.atmosphere {
+	background-color: #cc6633;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: white;
+}
+
+section.atmosphere article{
+	padding: 0 20px 0 515px;
+	/*515px on the left pushes the content inside of the article area 15px away from the left hand side;
+	gives us room to bring the background graphic*/
+	background: url(../images/photo_lounge.jpg) no-repeat 0 5px;
+	/*the 5 px pushed the picture down a little bit to be lined up with the heading*/
+	min-height:220px;
+	/*this property defines the minimum height of an element;
+	if the content is smaller that the min-height, this property will be applied,
+	in order not to cut for example an attached picture.
+	if the content is larger than the min-height, the property has no effect*/
+}
+
+
+/*Section - How to*/
+
+section.how-to {
+	background-color: #eee9d9;
+	position: relative;
+}
+
+section.how-to aside {
+	width: 30%;
+	float: left;
+	margin-right: 10px;
+}
+
+section.how-to aside .content {
+	padding: 30px 30px 20px 0;
+}
+
+section.how-to aside .content img {
+	display: block;
+	/*images are in line by default, so images appear next to eachother*/
+	margin-bottom: 15px;
+	width: 70%;
+	/*it takes 70% of the parent's width, the aside*/
+}
+section.how-to aside .content h4 {
+	margin-bottom: 0;
+}
+section.how-to aside .content p {
+	margin-bottom: .5em;
+}
+section.how-to aside .content a {
+	display: inline-block ;
+	color: #cc6633;
+	font-weight:700;
+}
+
+section.how-to blockquote {
+	margin: 0;
+	width:32%;
+	color:#444;
+	background-color:white;
+	position: absolute;
+	bottom: 0;
+	/*this means that the white box will touch the next div in our page;
+	it will give the illusion of the continuous color*/
+	right: 4%;
+	top:5%;
+}
+
+section.how-to blockquote p {
+	margin: 30px 30px 20px 50px;
+}
+
+section.how-to blockquote p.quote {
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+section.how-to blockquote p.credit {
+	color: #777;
+	font-size:.9em;
+	margin-top: 0;
+	padding-left:20px;
+	line-height:1.3em;
+	position:relative;
+}
+
+section.how-to blockquote::before {
+	content: 'ʺ';
+	/*from the list of unicode caracters*/
+	color: #b2bd65;
+	position: absolute;
+	top:10px;
+	left:8px;
+	font-size:5em;
+	/*5 times the base font */
+	font-family: serif;
+}
+section.how-to blockquote p.quote::after {
+	content:'ʺ';
+	font-family:serif;
+}
+
+section.how-to blockquote p.credit::before {
+	content:'\2014';
+	position:absolute;
+	top:-1px;
+	left:0;
+}
+
+/* Navigation  */
+
+nav {
+	background-color: rgba(0,0,0,.65);
+	position:absolute;
+	top:0px; left:0px;
+	padding: 50px 0 0 0 ;
+	width :100%;
+}
+
+nav::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+nav ul {
+	list-style:none;
+	/*takes away the bullets*/
+	margin:0;
+	padding: 0px;
+}
+
+nav ul li:hover {
+	background-color: #2b0306;
+}
+nav ul li:hover > ul{
+/*ul's from inside of a li in a hover state*/
+	display:block;
+
+}
+
+nav ul li a {
+	display: inline-block;
+	/*compared to inline, this one allows to set a width and a height on the element*/
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	/*removes the underlines*/
+	width:125px;
+	/*allows us to define the width of the submenus that drops from the main set of navigation*/
+	position: relative;
+	/*used later for specific arrows which are related to the anchor tag*/
+
+}
+
+nav ul li a:visited {
+	color:white;
+}
+nav ul li a:hover {
+	background-color: #6d0911;
+}
+
+
+nav ul ul {
+	position:absolute;
+	top:100%;
+	background-color: #2b0306;
+	display:none;
+}
+
+nav ul ul li {
+	position: relative;
+}
+
+nav ul ul ul {
+	left:100%;
+	top:0px;
+}
+
+
+/*  top-level */
+
+/*for ul's which are immeadiately the child of nav*/
+nav > ul {
+	padding-left: 200px;
+}
+nav > ul > li {
+	float: left;
+}
+nav > ul > li > a {
+	width: auto;
+	padding: 10px 20px 15px 20px;
+}
+
+/*targeting elements that have a specific atribute []*/
+nav a[aria-haspopup="true"]::after {
+	content:'';
+	display:block;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top: 16px;
+	right: 15px;
+
+	/*creating a triangle showing to the right*/
+	border-top:4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #fff;
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+	
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;
+	left: 20px ;
+	right: auto;
+	bottom: 6px;
+	top: auto;
+}
+
+/*Footer*/
+
+footer {
+	font-size:.8em;
+	margin:40px;
+	color:#999;
+}
+footer .content {
+	display: inline;
+	/*allows that element to flow along the side of other element*/
+}
+
+footer a {
+	margin-left: 30px;
+	color: #777;
+}
+footer a:visited {
+	color: #777;
+}
+footer a:hover {
+	color: #000;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 1000px) {
+/*the rules we put here take effect until the screen had max 1000 px*/
+	
+	h1 { font-size: 2.4em; }
+
+	/*Header*/
+	header div.hero { left: 56%; }
+	header div.hero h1 { margin-bottom: 20px; }
+
+	/*Section - atmosphere*/
+
+	section.atmosphere article {
+		padding-left: 400px;
+		background-size: 375px auto;
+	}
+}
+
+@media screen and (max-width: 825px) {
+	h1 { font-size:2.2em; }
+	
+	/*Header*/
+	header { height: 300px; background-image: url(../images/banner_825.jpg); }
+	header div.hero { top:120px; left:48%; }
+
+	/*Section - atmosphere*/
+	section.atmosphere article { padding-left: 325px; background-size: 300px auto; }
+
+	/*Section - how-to*/
+	section.how-to blockquote p.quote { font-size:1.1em; line-height:1.2em; }
+	section.how-to blockquote p.credit {font-size: .85em;}
+
+}
+
+@media screen and (max-width: 760px) {
+	h1 {font-size: 1.8em;}
+	h2 {font-size: 1.4em;}
+	h3 {font-size: 1.1em;}
+	a.btn {font-size: 1em;}
+
+	/*Header*/
+
+	header a.logo { width:145px; height:60px; }
+	header div.hero { top:140px; left:48%; }
+
+	/*Section main*/
+	section.main { margin-top: 10px; margin-bottom:10px; }
+	section.main aside div.content {background-size:55px 55px; padding-top: 60px;}
+
+	/*Section - how-to*/
+	section.how-to aside div.content img { width:85%; }
+
+	/*Navigation*/
+	nav { padding-top: 80px; }
+	nav > ul { padding-left: 10px; }
+}
+
+@media screen and (max-width: 625px){
+	h1 { font-size: 1em }
+	h3 { margin-bottom:0px; }
+	a.btn { font-size: .9em }
+	/* .9em = 10% smaller than the base font */
+
+	/*Header*/
+	header { height: 160px ; background-image: url('../images/banner_625.jpg'); background-position: left top;}
+	header a.logo { 
+			width:100%; height: 66px;
+			left: 0px; top:0px;
+			background-color: rgba(0,0,0,.65);
+			background-size: 112px 46px;
+			/* 112 e pt. width si 46 e pt. height*/
+			background-position: 20px center;
+	 }
+	 header div.hero { width:300px; top:85px; left:130px; }
+	 header div.hero h1 { margin-bottom: 10px; }
+
+   	/*Section - Main*/
+   	section.main aside { 
+   		width:100%; 
+   		float:none; 
+   		text-align:left; 
+   	}
+   	section.main aside div.content { 
+   		margin:8px 20px 8px 0;
+   		padding: 5px 0px 10px 85px;
+   		background-size: 50px 50px;
+   		background-position: 20px 5px;
+   }
+
+   /*Section - Atmosphere*/
+   section.atmosphere article{
+   		padding: 160px 20px 0 0;
+   		background-size: 300px auto;
+   		min-height:initial;
+   }
+
+    /*Section - How to*/
+    section.how-to aside { 
+    	width: 100%;
+    	float:none;
+    	margin: 0;
+    	position: relative;
+     }
+     section.how-to aside div.content {
+     	padding:20px 20px 20px 150px;
+     }
+     section.how-to aside div.content p{
+     	font-size: .9em;
+     	/*10% smaller than the base font*/
+     }
+     section.how-to aside div.content img {
+     	display:inline block;
+     	width:125px;
+     	position:absolute;
+     	top:30px;
+     	left:0px;
+     }
+     section.how-to blockquote {
+     	margin:0 20px 0 40px;
+     	width:90%;
+     	padding:1px 0 20px 0;
+     	position:relative;
+     }
+     section.how-to blockquote p.credit{
+     	margin-bottom:0;
+     }
+
+
+	/*Navigation*/
+	nav { position:static; width:auto; padding:20px 15px; background-color: #4b0a0c;}
+	/*auto does not let the nav to be as wide as the parent, as it does usually;
+	static means that the content will appear as it appears in the document flow;
+	we need to set the color, because the transparent one that is has in the first place, agains white will result into a grey*/
+
+
+	/*putting more tags with a comma inbetween means that the following rules will apply to all of them*/
+	nav ul,
+	nav ul ul,
+	nav ul ul ul {
+		display: block;
+		position:static;
+	}
+
+	nav > ul { padding:0; }
+	nav > ul > li { float:none; margin-top:25px; }
+
+	nav ul li:hover { background: none; }
+	nav ul li a { 
+		width:auto;
+		display: block;
+		/*this means that the anchor links wil be the full width of the browser, just like a paragraph*/
+		/*means that the entire row will be clickable*/
+		margin: 8px 18px;
+		padding: 8px 15px;
+		border: 1px solid rgba(255,255,255,.25);
+	}
+
+	nav ul li a:hover { background-color: rgba(255,255,255,.2);}
+
+	nav ul ul { background: none;}
+
+	nav ul ul li a { margin-left:30px;}
+
+	nav ul ul ul li a { margin-left:60px;}
+
+	nav a[aria-haspopup='true']::after { display:none; }
+
+	/*Footer*/
+
+	footer div.content { display:block; margin-top: 15px;}
+	footer div.content a { margin: 0 20px 0 0; }
+
+}
+
+@media screen and (max-width: 425px) {
+
+	/*Header*/
+	header { height: 110px; background-image: url(../images/banner_425.jpg); }
+	header a.logo {
+		height:36px;
+		background: rgba(0,0,0,.65) url(../images/logo_small.svg) no-repeat center center;
+		background-size: 126px 17px;
+	}
+
+	header div.hero { width: 100%; left:0px; top:46px; text-align: center; }
+
+	header div.hero h1 {
+		font-size:1em;
+		margin-bottom:10px;
+	}
+
+	header div.hero a.btn {
+		padding: 2px 30px;
+		font-size: .8em;
+	}
+	header div.hero a.btn span { display:none; }
+
+	/*Section - How To*/
+	section.how-to aside div.content { padding: 140px 20px 20px 0px;}
+	section.how-to aside div.content img { width: auto; height: 100px; top: 30px;}
+	section.how-to blockquote { margin:10px 40px 0px 20px; }
+
+	/*Footer*/
+	footer::after {
+		content:'';
+		display:block;
+		clear:both;
+		/*the footer extends in height, to cover all of the children which have the float property*/
+	}
+	footer div.content a {
+		display:inline block;
+		margin:0 0 10px 0;
+		float: left;
+		clear:both;
+		/*float will make them arrange to the left, but the clear property will make them stack unde each other*/
+		
+	}
+
+
+}

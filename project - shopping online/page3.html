@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html  class="page3">
+	<head>
+		<title>Single product</title>
+
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">	
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<script>
+		  $( function() {
+		    $( "#menu" ).menu();
+		  } );
+		</script>
+
+		<style>
+		  .ui-menu { width: 150px; }
+		</style>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+
+		<link href="images/fontawesome/css/fontawesome.css" rel="stylesheet">
+  		<link href="images/fontawesome/css/brands.css" rel="stylesheet">
+  		<link href="images/fontawesome/css/solid.css" rel="stylesheet">
+
+		</head>
+
+	<body>
+		
+		<header>
+			<nav class="menu">
+				<ul class="left">
+					<li>
+						<select class="language" data-width="fit">
+    						<option data-content='English'>English</option>
+  							<option  data-content='Romana'>Romana</option>
+						</select>
+					</li>
+					<li>
+						<select class="currency" data-width="fit">
+    						<option data-content='USD'>USD</option>
+  							<option  data-content='RON'>RON</option>
+						</select>
+					</li>
+					<li>Default welcome msg!</li>
+				</ul>
+
+				<ul class="right">
+					<li><a href="">My Account</a></li>
+					<li><a href="">Checkout</a></li>
+					<li><a href="">Wishlist</a></li>
+					<li><a href="">Blog</a></li>
+					<li>
+						<select>
+							<option>Company</option>
+						</select>
+					</li>
+					<li><a href="">Log In</a></li>
+				</ul>
+			</nav>
+			<div style="clear: both"></div>
+
+			<nav class="search">
+				<a href="index.html"><div class="main-logo">Linea</div></a>
+				<input type="text" placeholder="Search...">
+				<span class="search-sign"><i class="fas fa-search"></i></span>
+				<a href=""><div class="cart"><i class="fas fa-shopping-bag"></i></div></a>
+				<ul>
+					<li id="name">SHOPPING CART</li>
+					<li id="cart"> items/ price</li>
+				</ul>			
+			</nav>
+			<div style="clear: both"></div>
+
+		</header>
+
+		<div class="page">
+			<nav class="top-page">
+				<ul id="menu" class="categories">
+					<li id="first-item"><div><i class="fas fa-bars"></i>ALL CATEGORIES</div></li>
+				</ul>
+
+				<ul class="info">
+					<li>Free Shipping Worldwide</li>
+					<li>/ Money Back Guarantee </li>
+					<li>/ Hotline +(888) 123 - 4567 </li>
+				</ul>
+
+				<a href=""><span id="offer">OFFER ZONE</span></a>
+			</nav>
+			<div style="clear: both"></div>
+
+			<div class="status">
+				<ul>
+					<li>Home</li>
+					<li> / </li>
+					<li> Women </li>
+					<li> / </li>
+					<li> Stylist Bag </li>
+					<li> / </li>
+					<li class="current"> Clutch Handbags </li>
+				</ul>
+			</div>
+
+			<div class="pictures">
+				<img src="images/3.1.jpg">
+				<ul>
+					<li class="arrow"><i class="fas fa-angle-left"></i></li>
+					<li><img src="images/3.2.jpg"></li>
+					<li><img src="images/3.3.jpg"></li>
+					<li><img src="images/3.4.jpg"></li>
+					<li><img src="images/3.5.jpg"></li>
+					<li class="arrow"><i class="fas fa-angle-right"></i></li>
+				</ul>
+			</div>
+
+			<div class="info">
+				<h1>Wholesale charming skirt</h1>
+				<div class="side-arrows">
+					<span class="arrow"><i class="fas fa-angle-left"></i></span>
+					<span class="line"></span>
+					<span class="arrow"><i class="fas fa-angle-right"></i></span>
+				</div>
+				<div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+				<div class="review-number">1 Review(s)</div>
+				<div class="add-review">Add your review</div>
+
+				<div class="price">
+					<div class="new-price">$309.99</div>
+					<div class="old-price">$315.99</div>
+					<div class="status"><span><i class="far fa-check-square"></i></span>In stock</div>
+				</div>
+
+				<div class="qty">
+					<ul>
+						<li>Qty:</li>
+						<li class="btn">-</li>
+						<li class="btn">1</li>
+						<li class="btn">+</li>
+						<li class="button"><span class="cart"><i class="fas fa-shopping-cart"></i></span>Add to cart</li>
+					</ul>
+				</div>
+
+				<div class="overview">
+					<h1>Quick Overview</h1>
+					<p>Commodo sed egestas egestas fringilla. Imperdiet dui accumsan sit amet nulla. Vulputate mi sit amet mauris commodo. Quam adipiscing vitae proin sagittis nisl rhoncus. Ac placerat vestibulum lectus mauris. Sed tempus urna et pharetra pharetra massa massa. Euismod quis viverra nibh cras. Auctor urna nunc id cursus metus aliquam.</p>
+				</div>
+
+				<ul class="buttons">
+					<li><div class="button"><span class="logo"><i class="fas fa-heart"></i></span>Add to wishlist</div></li>
+					<li><div class="button"><span class="logo"><i class="fas fa-ellipsis-v"></i></span>Add to compare</div></li>
+					<li><div class="button"><span class="logo"><i class="fas fa-envelope"></i></i></span>Email to a friend</div></li>
+				</ul>
+
+				<ul class="social-media">
+					<li><i class="fab fa-facebook-f"></i></li>
+					<li><i class="fab fa-twitter"></i></li>
+					<li><i class="fab fa-google-plus-g"></i></li>
+					<li><i class="fas fa-wifi"></i></li>
+					<li><i class="fab fa-pinterest"></i></li>
+					<li><i class="fab fa-linkedin-in"></i></li>
+					<li><i class="fab fa-youtube"></i></li>
+				</ul>
+
+				<ul class="details">
+					<li>Free Worldwide Shipping</li>
+					<li>30 days return</li>
+					<li>Member Discount</li>
+				</ul>
+			</div>
+
+			<div class="text">
+				<ul class="tabs">
+					<li >Product description</li>
+					<li onclick="myFunction()">Tags</li>
+					<li onclick="myFunction1()">Reviews</li>
+					<li onclick="myFunction2()">Custom tab</li>
+				</ul>
+				<p id="text">Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Cursus risus at ultrices mi tempus imperdiet. Volutpat commodo sed egestas egestas. Eu sem integer vitae justo eget magna fermentum iaculis. Neque gravida in fermentum et sollicitudin ac orci phasellus. Fringilla urna porttitor rhoncus dolor purus. Lacus vel facilisis volutpat est. Sed libero enim sed faucibus turpis in eu. <br>
+				Dolor magna eget est lorem ipsum. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Facilisi nullam vehicula ipsum a arcu.Commodo odio aenean sed adipiscing diam donec. Egestas erat imperdiet sed euismod nisi. Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Etiam tempor orci eu lobortis.</p>
+			</div>
+
+			<script>
+				function myFunction() {
+					document.getElementById("text").innerHTML ="Hello!";
+				}
+				function myFunction1() {
+					document.getElementById("text").innerHTML ="Nice skirt!";
+				}
+				function myFunction2() {
+					document.getElementById("text").innerHTML ="Bye!";
+				}
+
+			</script>
+
+	</body>
+</html>

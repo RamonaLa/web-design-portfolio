@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="home">
+	<head>
+		<title>Shop</title>
+
+
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+		
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<script>
+		  $( function() {
+		    $( "#menu" ).menu();
+		  } );
+		</script>
+
+		<style>
+		  .ui-menu { width: 150px; }
+		</style>
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+
+		<link href="images/fontawesome/css/fontawesome.css" rel="stylesheet">
+  		<link href="images/fontawesome/css/brands.css" rel="stylesheet">
+  		<link href="images/fontawesome/css/solid.css" rel="stylesheet">
+
+  		
+
+		</head>
+
+	<body>
+		
+		<header>
+			<nav class="menu">
+				<ul class="left">
+					<li>
+						<select class="language" data-width="fit">
+    						<option data-content='English'>English</option>
+  							<option  data-content='Romana'>Romana</option>
+						</select>
+					</li>
+					<li>
+						<select class="currency" data-width="fit">
+    						<option data-content='USD'>USD</option>
+  							<option  data-content='RON'>RON</option>
+						</select>
+					</li>
+					<li>Default welcome msg!</li>
+				</ul>
+
+				<ul class="right">
+					<li><a href="">My Account</a></li>
+					<li><a href="">Checkout</a></li>
+					<li><a href="">Wishlist</a></li>
+					<li><a href="">Blog</a></li>
+					<li>
+						<select>
+							<option>Company</option>
+						</select>
+					</li>
+					<li><a href="">Log In</a></li>
+				</ul>
+			</nav>
+			<div style="clear: both"></div>
+
+			<nav class="search">
+				<a href="index.html"><div class="main-logo">Linea</div></a>
+				<input type="text" placeholder="Search...">
+				<span class="search-sign"><i class="fas fa-search"></i></span>
+				<a href=""><div class="cart"><i class="fas fa-shopping-bag"></i></div></a>
+				<ul>
+					<li id="name">SHOPPING CART</li>
+					<li id="cart"> items/ price</li>
+				</ul>			
+			</nav>
+			<div style="clear: both"></div>
+
+		</header>
+
+		<div class="page">
+			<nav class="top-page">
+				<ul id="menu" class="categories" >
+					<li  id="first-item"><div><i class="fas fa-bars"></i>ALL CATEGORIES</div></li>
+
+					<li>
+						<div><i class="fas fa-home"></i>
+						HOME</div>
+						<ul>
+							<li>Link 1</li>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li><div><i class="fas fa-file-alt"></i>PAGES</div>
+					<ul>
+							<li >Link 1</li>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li><div><a href="page1.html"><i class="fas fa-gift"></i>WOMEN</a></div>
+					<ul>
+							<a href="page3.html"><li>Link 1</li></a>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li><div><a href="page2.html"><i class="fas fa-suitcase"></i>MEN</a></div>
+					<ul>
+							<li>Link 1</li>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li><div><i class="fas fa-camera"></i>ELECTRONICS</div></li>
+
+					<li><div><i class="fas fa-couch"></i>FURNITURE</div></li>
+
+					<li><div><i class="fas fa-baby-carriage"></i>BABY &AMP; KIDS</div></li>
+
+					<li><div><i class="fas fa-basketball-ball"></i>GAME &AMP; SPORT</div>
+					<ul>
+							<li>Link 1</li>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li><div><i class="far fa-gem"></i>ACCESORIES</div>
+					<ul>
+							<li >Link 1</li>
+							<li>Link 2</li>
+							<li>Link 3</li>
+							<li>Link 4</li>
+						</ul>
+					</li>
+
+					<li ><div><i class="fas fa-ellipsis-h"></i>OTHER</div></li>
+				</ul>
+
+				<ul class="info">
+					<li>Free Shipping Worldwide</li>
+					<li>/ Money Back Guarantee </li>
+					<li>/ Hotline +(888) 123 - 4567 </li>
+				</ul>
+
+				<a href=""><span id="offer">OFFER ZONE</span></a>
+			</nav>
+			<div style="clear: both"></div>
+
+			<div class="banner">
+				<h3>Super Sale</h3>
+				<h1>Fashion Life</h1>
+				<h2>Lorem ipsum dolor sta met, consectetur adipiscing elit.</h2>
+				<a href=""><div class="btn">BUY NOW<span class="arrow"></span></div></a>
+			</div>
+
+			<section class="sales">
+				<div class="box1">
+					<h1>Mega Deal</h1>
+					<h3>Save up to <strong>70% OFF</strong> Fashion collection</h3>
+					<span class="picture1" onclick="myFunction()"></span>
+					<span class="picture2"></span>
+					<span class="picture3"></span>
+				</div>
+
+				<div class="box2">
+					<h2>up to half price</h2>
+					<h1>Sale</h1>
+					<span class="tag"><i class="fas fa-tag"></i></span>
+					<h3>selected items only</h3>
+				</div>
+
+				<div class="box3">
+					<h2>Up to</h2>
+					<h1>40</h1>
+					<span>% off</span>
+					<h3>on Tops, Dresses &amp; more</h3>
+				</div>
+			</section>
+			<div style="clear: both"></div>
+
+			<div class="hot-deal">
+
+				<div class="red">Hot deal</div>
+
+				<div class="days">
+					<div class="number">367</div>
+					<div class="unit">Days</div>
+				</div>
+
+				<div class="hrs">
+					<div class="number">13</div>
+					<div class="unit">Hrs</div>
+				</div>
+
+				<div class="mins">
+					<div class="number">25</div>
+					<div class="unit">Mins</div>
+				</div>
+
+				<div class="sec">
+					<div class="number">46</div>
+					<div class="unit">Sec</div>
+				</div>
+
+			</div>
+
+			<nav class="new-products">
+				<h1>New Products</h1>
+				<a href=""><div class="btn">Women</div></a>
+				<a href=""><div class="btn">Furniture</div></a>
+				<a href=""><div class="btn">Men</div></a>
+				<a href=""><div class="btn">Kids</div></a>
+				<a href=""><div class="btn">Accessories</div></a>
+			</nav>
+			<div style="clear: both"></div>
+
+			<div class="products">
+				<div class="item1"></div>
+				<div class="item2">
+					<div class="sale">Sale</div>
+					<span class="arrow"></span>
+					<div class="new">New</div>
+					<span class="arrow2"></span>
+				</div>
+				<div class="item3"></div>
+				<div class="item4">
+					<div class="new">New</div>
+					<span class="arrow"></span>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>
